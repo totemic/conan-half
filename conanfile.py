@@ -11,6 +11,8 @@ class HalfConan(ConanFile):
     description = "Library to provide an IEEE-754 conformant half-precision floating point type."
     url = "https://sourceforge.net/projects/half/"
 
+    no_copy_source = True
+
     def source(self):
         zip_url = f"{self.url}/files/half/{self.version}/half-{self.version}.zip/download"
         tools.get(zip_url)
